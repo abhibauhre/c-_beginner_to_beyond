@@ -10,3 +10,7 @@ int main(){
     cout<<"no really :" <<number << "is my fav number:";
     return 0;
 }
+// this is a comment 
+/*this is 
+multi line comment 
+*/

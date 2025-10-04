@@ -35,4 +35,17 @@ int main(){
 
         cout<<"there are "<<test_score.size()<<" scores in the vector"<<endl;
 
+       // 2D vectors
+        vector <vector<int>> movie_ratings
+        {
+          {1,2,3,4},  
+          {5,6,7,8},
+          {9,10,11,12}
+        };
+
+        cout<<"movie rating from reviewer 1 for movie 1 is :"<<movie_ratings[0][0]<<endl;
+        cout<<"movie rating from reviewer 2 for movie 4 is :"<<movie_ratings[1][3]<<endl;
+        cout<<"movie rating from reviewer 3 for movie 2 is :"<<movie_ratings.at(2).at(1)<<endl;
+
+
 }

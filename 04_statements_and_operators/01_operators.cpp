@@ -3,11 +3,11 @@
 using namespace std;
 
 int main(){
-    cout << "=== C++ OPERATORS COMPLETE GUIDE ===" << endl << endl;
     
-    // ===============================
+    
+ 
     // 1. ARITHMETIC OPERATORS (+, -, *, /, %)
-    // ===============================
+    
     cout << "1. ARITHMETIC OPERATORS:" << endl;
     int a = 15, b = 4;
     
@@ -19,9 +19,9 @@ int main(){
     cout << "a % b = " << (a % b) << " (Modulus - Remainder)" << endl;
     cout << endl;
     
-    // ===============================
+   
     // 2. ASSIGNMENT OPERATORS (=, +=, -=, *=, /=, %=)
-    // ===============================
+    
     cout << "2. ASSIGNMENT OPERATORS:" << endl;
     int x = 10;
     cout << "Initial x = " << x << endl;
@@ -39,9 +39,9 @@ int main(){
     cout << "After x /= 4: " << x << endl;
     cout << endl;
     
-    // ===============================
+
     // 3. COMPARISON/RELATIONAL OPERATORS (==, !=, <, >, <=, >=)
-    // ===============================
+  
     cout << "3. COMPARISON OPERATORS:" << endl;
     int num1 = 10, num2 = 20;
     
@@ -54,9 +54,9 @@ int main(){
     cout << "num1 >= num2: " << (num1 >= num2) << " (Greater than or equal)" << endl;
     cout << endl;
     
-    // ===============================
+  
     // 4. LOGICAL OPERATORS (&&, ||, !)
-    // ===============================
+  
     cout << "4. LOGICAL OPERATORS:" << endl;
     bool p = true, q = false;
     
@@ -67,9 +67,9 @@ int main(){
     cout << "!q: " << (!q) << " (Logical NOT)" << endl;
     cout << endl;
     
-    // ===============================
+    
     // 5. INCREMENT/DECREMENT OPERATORS (++, --)
-    // ===============================
+    
     cout << "5. INCREMENT/DECREMENT OPERATORS:" << endl;
     int count = 5;
     
@@ -83,9 +83,8 @@ int main(){
     cout << "Final count = " << count << endl;
     cout << endl;
     
-    // ===============================
     // 6. BITWISE OPERATORS (&, |, ^, ~, <<, >>)
-    // ===============================
+   
     cout << "6. BITWISE OPERATORS:" << endl;
     int bit1 = 12;  // Binary: 1100
     int bit2 = 10;  // Binary: 1010
@@ -100,9 +99,9 @@ int main(){
     cout << "bit1 >> 1 = " << (bit1 >> 1) << " (Right shift)" << endl;
     cout << endl;
     
-    // ===============================
+
     // 7. CONDITIONAL/TERNARY OPERATOR (? :)
-    // ===============================
+  
     cout << "7. CONDITIONAL (TERNARY) OPERATOR:" << endl;
     int age = 18;
     string status = (age >= 18) ? "Adult" : "Minor";
@@ -114,9 +113,9 @@ int main(){
     cout << "Maximum of " << num1 << " and " << num2 << " is: " << max_num << endl;
     cout << endl;
     
-    // ===============================
+    
     // 8. SIZEOF OPERATOR
-    // ===============================
+   
     cout << "8. SIZEOF OPERATOR:" << endl;
     cout << "Size of int: " << sizeof(int) << " bytes" << endl;
     cout << "Size of double: " << sizeof(double) << " bytes" << endl;
@@ -124,9 +123,9 @@ int main(){
     cout << "Size of bool: " << sizeof(bool) << " byte" << endl;
     cout << endl;
     
-    // ===============================
+    
     // 9. POINTER OPERATORS (*, &)
-    // ===============================
+  
     cout << "9. POINTER OPERATORS:" << endl;
     int value = 42;
     int* ptr = &value;  // & = address-of operator

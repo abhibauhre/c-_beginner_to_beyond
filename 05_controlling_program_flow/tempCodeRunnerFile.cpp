@@ -1,2 +1,7 @@
- // for(int i{1};i<=10 ; i += 2)
-    // cout<<i<<endl;
+    // int num{};
+    // int i{1};
+    // cout<<"Enter a number "<<endl;
+    // cin>>num;
+    // while(num >= i){
+    //     cout<<i<<endl;
+    //     ++i;

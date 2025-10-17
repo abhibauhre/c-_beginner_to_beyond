@@ -403,7 +403,6 @@ int main() {
     
     // Final calculator statistics
     cout << "\n=== FINAL CALCULATOR REPORT ===" << endl;
-    cout << "Sessions completed: 2 challenges" << endl;
     cout << "Total calculations performed: " << total_calculations << endl;
     cout << "Final memory value: " << memory << endl;
     cout << "===============================" << endl;

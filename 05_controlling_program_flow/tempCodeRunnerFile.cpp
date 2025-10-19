@@ -1,7 +1,8 @@
-    // int num{};
-    // int i{1};
-    // cout<<"Enter a number "<<endl;
-    // cin>>num;
-    // while(num >= i){
-    //     cout<<i<<endl;
-    //     ++i;
+
+    - Keep track of wins/losses across multiple games
+    - Add input validation (handle non-numeric input)
+*/
+
+#include <iostream>
+#include <cstdlib>  // for rand() and srand()
+#include <ctime>    // for time()

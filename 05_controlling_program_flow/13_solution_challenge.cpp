@@ -108,6 +108,48 @@ int main() {
 }
 
 /*
+    MINI SOLUTION CHALLENGE: Even or Odd Counter
+    --------------------------------------------
+    Write a program that:
+    1. Asks the user how many numbers they want to enter.
+    2. Reads that many numbers from the user (one at a time).
+    3. Counts how many are even and how many are odd.
+    4. Displays the counts at the end.
+    5. Handles invalid (non-integer) input gracefully.
+*/
+
+#include <limits>
+
+int even_odd_counter() {
+    int n;
+    cout << "\n=== Even or Odd Counter ===" << endl;
+    cout << "How many numbers will you enter? ";
+    while (!(cin >> n) || n <= 0) {
+        cout << "Please enter a positive integer: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+
+    int even_count = 0, odd_count = 0, value;
+    for (int i = 1; i <= n; ++i) {
+        cout << "Enter number " << i << ": ";
+        while (!(cin >> value)) {
+            cout << "Invalid input. Please enter an integer: ";
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
+        if (value % 2 == 0)
+            ++even_count;
+        else
+            ++odd_count;
+    }
+    cout << "\nYou entered " << even_count << " even and " << odd_count << " odd numbers." << endl;
+    return 0;
+}
+
+// To run this challenge, call even_odd_counter(); from main or separately.
+
+/*
     SOLUTION EXPLANATION:
     
     This challenge demonstrates multiple control flow concepts:

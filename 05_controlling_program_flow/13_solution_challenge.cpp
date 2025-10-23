@@ -1,4 +1,68 @@
 /*
+    MINI PROJECT: Simple ATM Simulator
+    ----------------------------------
+    Write a program that simulates a simple ATM with the following features:
+    1. User starts with a balance (e.g., 1000 units)
+    2. Show a menu: Check Balance, Deposit, Withdraw, Exit
+    3. Perform the selected operation, loop until user chooses Exit
+    4. Validate input (no negative deposits/withdrawals, no overdraft)
+    5. Display messages for invalid actions
+*/
+
+void simple_atm() {
+    double balance = 1000.0;
+    int choice;
+    double amount;
+    cout << "\n=== Simple ATM Simulator ===" << endl;
+    do {
+        cout << "\nMenu:\n";
+        cout << "1. Check Balance\n";
+        cout << "2. Deposit\n";
+        cout << "3. Withdraw\n";
+        cout << "4. Exit\n";
+        cout << "Enter your choice (1-4): ";
+        while (!(cin >> choice) || choice < 1 || choice > 4) {
+            cout << "Invalid choice. Please enter 1-4: ";
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
+        switch (choice) {
+            case 1:
+                cout << "Current balance: " << balance << endl;
+                break;
+            case 2:
+                cout << "Enter amount to deposit: ";
+                while (!(cin >> amount) || amount <= 0) {
+                    cout << "Invalid amount. Enter a positive number: ";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
+                balance += amount;
+                cout << "Deposited: " << amount << ". New balance: " << balance << endl;
+                break;
+            case 3:
+                cout << "Enter amount to withdraw: ";
+                while (!(cin >> amount) || amount <= 0) {
+                    cout << "Invalid amount. Enter a positive number: ";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
+                if (amount > balance) {
+                    cout << "Insufficient funds! Current balance: " << balance << endl;
+                } else {
+                    balance -= amount;
+                    cout << "Withdrawn: " << amount << ". New balance: " << balance << endl;
+                }
+                break;
+            case 4:
+                cout << "Thank you for using the ATM. Goodbye!" << endl;
+                break;
+        }
+    } while (choice != 4);
+}
+
+// To run this project, call simple_atm(); from main or separately.
+/*
     CHALLENGE: Number Guessing Game
     
     Create a simple number guessing game with the following requirements:

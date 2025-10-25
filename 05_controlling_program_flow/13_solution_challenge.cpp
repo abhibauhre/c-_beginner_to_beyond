@@ -1,4 +1,55 @@
 /*
+    MINI PROJECT: Student Gradebook
+    ------------------------------
+    Write a program that:
+    1. Asks the user how many students are in the class.
+    2. For each student, asks for their name and score (0-100).
+    3. Stores names and scores, calculates the average score.
+    4. Finds and displays the student(s) with the highest score.
+    5. Handles invalid input gracefully.
+*/
+
+#include <vector>
+#include <string>
+
+void student_gradebook() {
+    int n;
+    cout << "\n=== Student Gradebook ===" << endl;
+    cout << "How many students? ";
+    while (!(cin >> n) || n <= 0) {
+        cout << "Please enter a positive integer: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+
+    vector<string> names(n);
+    vector<int> scores(n);
+    int total = 0;
+    int highest = -1;
+    for (int i = 0; i < n; ++i) {
+        cout << "Enter name for student " << (i+1) << ": ";
+        cin >> names[i];
+        cout << "Enter score (0-100) for " << names[i] << ": ";
+        while (!(cin >> scores[i]) || scores[i] < 0 || scores[i] > 100) {
+            cout << "Invalid score. Enter a value between 0 and 100: ";
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
+        total += scores[i];
+        if (scores[i] > highest) highest = scores[i];
+    }
+
+    double average = static_cast<double>(total) / n;
+    cout << "\nClass average: " << average << endl;
+    cout << "Highest score: " << highest << " by: ";
+    for (int i = 0; i < n; ++i) {
+        if (scores[i] == highest) cout << names[i] << " ";
+    }
+    cout << endl;
+}
+
+// To run this project, call student_gradebook(); from main or separately.
+/*
     MINI PROJECT: Simple ATM Simulator
     ----------------------------------
     Write a program that simulates a simple ATM with the following features:
